@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name="motion" type="String" access="private" default="0.0"/>
+   <aura:attribute name="light" type="String" access="private"/>
+    <aura:attribute name="rgb" type="string" default="255,255,255"/>
+   <aura:attribute name="class" type="String" access="private" default="yellow"/> 
+    <aura:attribute name="message" type="String" />
+    <lightning:empApi aura:id="empIoT" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+       
+      <lightning:card footer="{!v.message}" iconName="utility:connected_apps" title="Light Sensor">
+        <p class="{!v.class}">
+           lux reading: {!v.light}
+        </p>
+          <p style="{!'background-color: rgb('+ v.rgb + ')'}" class="default">
+              RGB({!v.rgb})
+          </p>
+    </lightning:card>
+</aura:component>
