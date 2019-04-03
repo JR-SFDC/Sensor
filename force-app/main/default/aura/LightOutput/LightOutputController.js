@@ -11,13 +11,11 @@
           
             var jsonRaw = JSON.parse(JSON.stringify(eventReceived));
             
-            var motion = jsonRaw.data.payload.Inbound_Motion__c ;
             var light = jsonRaw.data.payload.Inbound_Reading__c ;
             var rgb = jsonRaw.data.payload.rgb__c;
           	component.set("v.light",light) ;    
             component.set("v.rgb",rgb);
             
-            console.log('motion: ' + motion);
             console.log('light: ' + light);
             
             if (light <= '500') { component.set("v.class", "light20");component.set("v.message","Light level critical! lux: " + light);}
