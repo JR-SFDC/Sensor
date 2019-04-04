@@ -7,7 +7,7 @@ Two lightning components that dispaly the data coming off your Enviro Phat senso
 ## Resources
 
 ## Description of Files and Directories
-Uses Lightning empApi and you need to setup the Platform event for this to work.
+Uses Lightning empApi and you need to setup the Platform event for this to work. You don't need the Enviro Phat sensor but the demo works a lot better if you do.
 
 SensorReading component: This will display the motion (z axis), temperature, pressuare and lux readings from your sensore.
                          The lux badge will change brightness correspoding with the lux level.
