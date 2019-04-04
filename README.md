@@ -17,3 +17,4 @@ LightOutPut component: This will display the RGB and lux readings from the senso
                        Can be used anywhere
 
 ## Issues
+Migrate to LWC
